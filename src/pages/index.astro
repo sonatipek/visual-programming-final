@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+---
+
+<Layout title="Sonat Saygın İPEK - Görsel Programlama">
+
+	<main>
+		<h1 class="font-bold"> <span class="text-gradient">Görsel Programlama</span> Sınavına Hoşgeldiniz</h1>
+
+		<ul role="list" class="flex	gap-4">
+			<Card
+				href="\mycomponents"
+				title="My Components"
+				body="Bu kısımda componentlarımı görebilirsiniz."
+				img_path="/brand.png"
+			/>
+			<Card
+				href="/echarts"
+				title="E-Charts"
+				body="Bu kısımda e-charts ile hazırladığım tabloları görebilirsiniz."
+				img_path="/e_chartlogo.png"
+			/>
+			<Card
+				href="/blog"
+				title="Blog"
+				body="Bu kısımda MD ile blog sayfası görebilirsiniz"
+				img_path="https://picsum.photos/200/300/?blur=2"
+			/>
+			<Card
+				href="/araclar"
+				title="Kullanılan Araçlar"
+				body="Bu kısımda sınaviçin kullandığım araçları görebilirsiniz"
+				img_path="https://picsum.photos/200/300/?blur=2"
+			/>
+		</ul>
+	</main>
+</Layout>
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

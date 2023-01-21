@@ -1,0 +1,127 @@
+---
+export interface Props {
+	navbarItem_1: string;
+	navbarItem_2: string;
+	navbarItem_3: string;
+
+
+    buttonItem_1: string;
+    buttonItem_2: string;
+}
+
+const { navbarItem_1, navbarItem_2, navbarItem_3, navbarItem_4} = Astro.props;
+---
+
+<nav>
+    <h1><a href="/" class="logo-brand"><img src="/navbar.png"></a></h1>
+
+    <ul class="navbar-items">
+        <li class="navbar-item"><a href="/mycomponents" class="navbar-link">{navbarItem_1}</a></li>
+        <li class="navbar-item"><a href="/echarts" class="navbar-link">{navbarItem_2}</a></li>
+        <li class="navbar-item"><a href="/blog" class="navbar-link">{navbarItem_3}</a></li>
+        <li class="navbar-item"><a href="/araclar" class="navbar-link">{navbarItem_4}</a></li>
+    </ul>
+
+    
+    <div class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+</nav>
+
+<style>
+    /* Navbar */
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: var(--primary-color);
+        min-height: 70px;
+        padding: 0 5rem;
+        width: 100%;
+    }
+
+    nav a, ul, li{
+        text-decoration: none;
+        list-style-type: none;
+    }
+
+    /* Navbar Brand */
+    nav h1 a{
+        color: var(--white);
+    }
+    
+    nav a.logo-brand{
+        font-size: var(--h3);
+        font-weight: var(--wbold);
+    }
+
+    /* Navbar Links */
+    nav ul.navbar-items{
+        display: flex;
+        gap: 32px;
+    }
+
+    nav ul.navbar-items a.navbar-link{
+        color: var(--white);
+        font-size: var(--h6);
+        font-weight: var(--wregular);
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+    }
+    nav ul.navbar-items a.navbar-link:active{
+        font-weight: 700;
+    }
+    
+    nav ul.navbar-items .navbar-item{
+        transition: 0.3s ease;
+        -webkit-transition: 0.3s ease;
+    }
+    nav ul.navbar-items .navbar-item:hover{
+        scale: 1.02;
+    }
+
+    /* Navbar Buttons */
+    nav ul.navbar-buttons{
+        display: flex;
+        gap: 1rem;
+    }
+
+    nav ul.navbar-buttons a.button{
+        font-weight: var(--wmedium);
+        font-size: var(--body);
+        padding: 0.625rem 1.25rem;
+        border-radius: 10px;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5 ease;
+    }
+
+    /* Outlined Button */
+    nav ul.navbar-buttons a.outline-primary-button{
+        border: 2px solid var(--white);
+        background-color: transparent;
+        color: var(--white);
+        border-radius: 32px;
+        
+    }
+
+    nav ul.navbar-buttons a.outline-primary-button:hover i{
+        -webkit-transform: scale(1.5) rotate(18deg);
+        transform: scale(1.5) rotate(18deg);
+        
+    }
+
+    nav ul.navbar-buttons a.outline-primary-button i{
+        margin-right: 0.625rem;
+        transition: 0.5s ease-in-out;
+        -webkit-transition: 0.5s ease-out;
+        -webkit-transform: perspective(1px) translateZ(0);
+        transform: perspective(1px) translateZ(0);
+        
+    }
+    .active{
+        font-weight: 700 !important;
+    }
+
+</style>

@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import Navbar from '../components/Navbar.astro';
+---
+<Layout title="My Components">
+	<main>
+		<h1 class="m-3 font-bold">1. Component</h1>
+		<p>Ana sayfada kullandığım navbar componenti</p>
+		<Navbar
+			navbarItem_1="Link 1"
+			navbarItem_2="Link 2"
+			navbarItem_3="Link 3"
+			navbarItem_4="Link 4"
+		></Navbar>
+
+		<h1 class="m-3 font-bold mt-8">2. Component</h1>
+		<p>Ana sayfada kullandığım card componenti</p>
+		<ul role="list" class="flex	gap-4">
+			<Card
+				href="#"
+				title="Title"
+				body="Açıklama Yazısı"
+				img_path="https://picsum.photos/300/200/?blur=2"
+			/>
+			<Card
+				href="#"
+				title="Title"
+				body="Açıklama Yazısı"
+				img_path="https://picsum.photos/300/200/?blur=2"
+			/>
+			<Card
+				href="#"
+				title="Title"
+				body="Açıklama Yazısı"
+				img_path="https://picsum.photos/300/200/?blur=2"
+			/>
+			<Card
+				href="#"
+				title="Title"
+				body="Açıklama Yazısı"
+				img_path="https://picsum.photos/300/200/?blur=2"
+			/>
+
+		</ul>
+	
+	</main>
+</Layout>
+
+
+<style>
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
+</style>

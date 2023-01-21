@@ -1,0 +1,33 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Kullanılan Araçlar">
+    <div class="container m-10 px-10">
+        <h1 class="font-bold">Kullanılan Araçlar</h1>
+
+        <ul>
+            <li>Astro JS</li>
+            <li>Tailwind CSS</li>
+            <li>Apache E-Charts</li>
+        </ul>
+
+
+        <h2 class="mt-10 font-bold">Araçların Kısa Açıklamaları</h2>
+        <h3 class="mx-5 mt-6 font-bold">Astro JS Nedir</h3>
+        <p class="mx-10">Astro Islands, front-end web mimarisi için önde gelen bir paradigma değişimini temsil eder. Astro, kullanıcı arayüzünüzü sayfa üzerinde daha küçük, izole bileşenlere ayırır.</p>
+
+        <h3 class="mx-5 mt-6 font-bold">Tailwind CSS Nedir</h3>
+        <p class="mx-10">Tailwind CSS, açık kaynaklı bir CSS çerçevesidir. Bu kitaplığın ana özelliği, Bootstrap gibi diğer CSS çerçevelerinin aksine, düğmeler veya tablolar gibi öğeler için önceden tanımlanmış bir dizi sınıf sağlamamasıdır.</p>
+
+        <h3 class="mx-5 mt-6 font-bold">Apache E-Charts Nedir</h3>
+        <p class="mx-10">Apache ECharts, tarayıcı için güçlü, etkileşimli bir grafik ve görselleştirme kütüphanesi.</p>
+    </div>
+</Layout>
+
+<style>
+    ul{
+        list-style-type: decimal-leading-zero;
+    }
+</style>

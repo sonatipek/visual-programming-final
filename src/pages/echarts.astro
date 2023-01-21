@@ -1,0 +1,48 @@
+---
+import Chart1 from "../components/Chart1.astro";
+import Chart2 from "../components/Chart2.astro";
+import Chart3 from "../components/Chart3.astro";
+import Chart4 from "../components/Chart4.astro";
+
+import Layout from "../layouts/Layout.astro"
+
+---
+
+<Layout title="E Charts">
+    
+    <div class="grid grid-cols-2 gap-5 m-10">
+        <Chart1></Chart1>
+        <Chart2></Chart2>
+        <Chart3></Chart3>
+        <Chart4></Chart4>
+    </div>
+    <a href="#" class="my-button m-8">Tabloyu Dikey Listele</a>
+</Layout>
+
+<style>
+    a.my-button{
+        background-color: lightcoral;
+        font-weight: 700;
+        padding: 1rem 2rem;
+        color: white;
+        border-radius: 8px;
+    }
+    a.my-button:hover{
+        background-color: rgb(157, 79, 79);
+        font-weight: 700;
+        padding: 1rem 2rem;
+        color: white;
+        border-radius: 8px;
+    }
+</style>
+
+
+<script>
+    let grid = document.querySelector('.grid')
+    let button = document.querySelector('.my-button')
+
+    button.addEventListener('click', () => {
+        grid.classList.add('grid-cols-1');
+        grid.classList.remove('grid-cols-2');
+    })
+</script>

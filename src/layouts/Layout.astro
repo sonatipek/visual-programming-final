@@ -1,0 +1,97 @@
+---
+import Navbar from '../components/Navbar.astro';
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="tr-TR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+	</head>
+	<body>
+		<Navbar
+			navbarItem_1="My Components"
+			navbarItem_2="E-Charts"
+			navbarItem_3="Blog"
+			navbarItem_4="Kullanılan Araçlar" ></Navbar>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	:root {
+		--accent: 124, 58, 237;
+		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
+		scroll-behavior: smooth;
+
+		/* Colors */
+        --primary-color: #B73E3E;
+        --text-title-color: #152536;
+        --text-body-color: #58595E;
+        --white: white;
+        --black: #333;
+        --card-bg-color: #EEFDFF;
+        --card-edge-color: #F4F4F4;
+
+		/* Fonts */
+		--font-family: 'Inter', sans-serif;
+
+		--wbold: 700;
+		--wmedium: 500;
+		--wregular: 400;
+		--wlight: 300;
+
+		--h1: 3rem;
+		--h2: 2.5rem;
+		--h3: 2rem;
+		--h4: 1.5rem;
+		--h5: 1.25rem;
+		--h6: 1rem;
+		--body: 0.875rem;
+		--body2: 0.75rem;
+		--caption: 0.625rem;
+		
+	}
+	*,
+	*::after,
+	*::before{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	html {
+		font-family: var(--font-family);
+		background-color: #F6F6F6;
+	}
+
+
+	/* Buttons */
+	a.button{
+        font-weight: var(--wmedium);
+        font-size: var(--h6);
+        padding: 0.625rem 1.25rem;
+        border-radius: 10px;
+        transition: 0.5s ease;
+        -webkit-transition: 0.5 ease;
+		text-decoration: none;
+    }
+
+	/* Primary Button */
+    a.button.primary-button{
+        border: 2px solid transparent;
+        background-color: var(--white);
+        color: var(--primary-color);
+    }
+    a.primary-button:hover{
+        box-shadow: 0 10px 10px -10px rgba(0, 2, 98, 0.899);
+		border-color: var(--primary-color);
+    }
+</style>

@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro"
+
+---
+
+<Layout title="Blog">
+    <h1 class="font-bold ">Astro Sınav Bloğu</h1>
+     <ul class="flex gap-10 p-6">
+        <li><a href="/blog/gonderi1" class="p-10">1. Saat</a></li>
+        <li><a href="/blog/gonderi2" class="p-10">2. Saat</a></li>
+        <li><a href="/blog/gonderi3" class="p-10">3. Saat</a></li>
+        <li><a href="/blog/gonderi4" class="p-10">4. Saat</a></li>
+     </ul>
+</Layout>
+
+<style>
+    li{
+        background-color: lightcoral;
+        height: 10vh;
+        transition: scale 0.5s;
+    }
+    li:hover{
+        scale: 1.3;
+    }
+    a{
+        width: fit-content;
+        height: 10vh;
+    }
+</style>

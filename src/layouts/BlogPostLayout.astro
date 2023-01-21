@@ -1,0 +1,31 @@
+---
+import Layout from "./Layout.astro";
+
+const {frontmatter} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="tr-TR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{frontmatter.title}</title>
+	</head>
+	<body>
+        <Layout title="">
+
+        </Layout>
+        <h1 class="font-bold">{frontmatter.title}</h1>
+		<slot />
+	</body>
+</html>
+
+
+<style>
+	
+
+
+	
+</style>
